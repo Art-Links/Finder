@@ -13,7 +13,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       categoryId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName: "Categories"
+          },
+          key: "id"
+        }
       },
       blurImage: {
         type: Sequelize.STRING
@@ -40,7 +46,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName: "Users"
+          },
+          key: "id"
+        }
       },
       isReturned: {
         type: Sequelize.BOOLEAN

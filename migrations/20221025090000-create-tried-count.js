@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('blockUserItems', {
+    await queryInterface.createTable('TriedCounts', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,9 +10,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName: "Users"
+          },
+          key: "id"
+        }
       },
       itemId: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName: "items"
+          },
+          key: "id"
+        }
+      },
+      county: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -26,6 +41,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('blockUserItems');
+    await queryInterface.dropTable('TriedCounts');
   }
 };
