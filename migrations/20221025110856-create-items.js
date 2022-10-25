@@ -42,6 +42,9 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
+      isReturned: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

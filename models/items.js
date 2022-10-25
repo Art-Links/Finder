@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     state: DataTypes.STRING,
     street: DataTypes.STRING,
     discrrtion: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    userId: DataTypes.INTEGER,
+    isReturned: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'items',
