@@ -1,4 +1,4 @@
-// var bcrypt = require('bcryptjs')
+var bcrypt = require('bcryptjs')
 var jwt = require('jsonwebtoken');
 
 const authService = {
