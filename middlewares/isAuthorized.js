@@ -1,6 +1,6 @@
 var isAuthorized = function(req, res, next) {
     console.log(req.user)
-    if (req.user.type == '2' || (req.user.type == '1')) {
+    if (req.user.type == 'user' || (req.user.type == 'admin')) {
         return next()
     }
     res.status(403)

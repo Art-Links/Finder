@@ -13,7 +13,7 @@ const authService = {
     generateToken: function(user) {
         return jwt.sign({
             id: user.id,
-            type: user?.userTypeId,
+            type: user?.UserType?.type,
             email: user.email,
             userName: user.userName
         }, '1234567890')
