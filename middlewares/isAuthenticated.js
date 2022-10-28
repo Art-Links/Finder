@@ -1,4 +1,4 @@
-var authService = require('../services/authService')
+const authService = require('../services/authService')
 const isAuthenticated = function(req, res, next) {
     var auth = req.headers.authorization
     if (auth) {
