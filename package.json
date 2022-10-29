@@ -17,6 +17,7 @@
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "nestjs-seeder": "^0.3.0",
     "react-jwt": "^1.1.7",
     "sequelize": "^6.25.3",
     "sequelize-cli": "^6.5.1"
