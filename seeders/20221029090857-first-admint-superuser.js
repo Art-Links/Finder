@@ -1,4 +1,5 @@
 'use strict';
+var authService = require('../services/authService')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

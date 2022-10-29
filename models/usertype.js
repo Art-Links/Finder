@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
 			UserType.hasMany(models.User, {
 				foreignKey: 'id'
 			})
+      UserType.hasMany(models.admin, {
+				foreignKey: 'id'
+			})
      }
     }
   UserType.init({
