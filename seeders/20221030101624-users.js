@@ -1,6 +1,5 @@
 'use strict';
-var authService = require('../services/authService')
-
+const authService = require('../services/authService')
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -13,16 +12,15 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-
-     return queryInterface.bulkInsert('Admins', [{
-      name: 'emadaishan',
-      email: 'openemad@gmail.com',
-      password: authService.hashPassword('123456789'),
+     return queryInterface.bulkInsert('Users', [{
+      userName: 'abdoo',
+      email: 'abdoo@gmail.com',
+      password: authService.hashPassword('1234567890'),
+      userTypeId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
   },
-
 
   async down (queryInterface, Sequelize) {
     /**
