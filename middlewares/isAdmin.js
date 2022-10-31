@@ -1,6 +1,6 @@
 const isAdmin = function(req, res, next) {
     if (req.user) {
-        if (req.user.type == 1) {
+        if (req.user.type == 'admin') {
             return next()
         }
     }
