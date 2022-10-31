@@ -15,13 +15,8 @@ module.exports = (sequelize, DataTypes) => {
 			User.belongsTo(models.UserType, {
 				foreignKey: 'userTypeId',
 			})
-			// User.hasMany(models.Photo, {
-			// 	foreignKey: 'photoableId',
-			// 	constraints: false,
-			// 	scope: {
-			// 		photoableType: 'member'
-			// 	}
-			// });
+
+			User.hasOne(models.UserInfo, {foreignKey: "userId"});
 		}
 	}
   User.init({
