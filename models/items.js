@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
       items.belongsTo(models.User, {
 				foreignKey: 'userId'
 			});
+      items.belongsTo(models.Category, {
+				foreignKey: 'categoryId'
+			});
     }
   }
   items.init({
