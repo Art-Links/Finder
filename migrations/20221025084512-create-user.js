@@ -18,10 +18,13 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      passwordConfirmation : {
+        type: Sequelize.STRING
+      },
       userTypeId: {
         type: Sequelize.INTEGER,
-        references:{
-          model:{
+        references: {
+          model: {
             tableName: "UserTypes"
           },
           key: "id"

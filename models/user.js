@@ -22,10 +22,12 @@ module.exports = (sequelize, DataTypes) => {
 			});
 		}
 	}
+
   User.init({
     userName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
+    passwordConfirmation: DataTypes.STRING,
     userTypeId: DataTypes.STRING,
     isActive: DataTypes.BOOLEAN,
     deleteAt: DataTypes.DATE
