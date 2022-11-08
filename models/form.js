@@ -3,23 +3,30 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class TriedCount extends Model {
+  class Form extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Form.belongsTo(models.Item, {
+        foreignKey: 'itemId'
+      })
+      Form.belongsTo(models.User, {
+        foreignKey: 'userId'
+      })
     }
   }
-  TriedCount.init({
+  Form.init({
     userId: DataTypes.INTEGER,
     itemId: DataTypes.INTEGER,
-    county: DataTypes.INTEGER
+    accepted: DataTypes.BOOLEAN,
+    answers: DataTypes.TEXT
   }, {
     sequelize,
-    modelName: 'TriedCount',
+    modelName: 'Form',
+    tableName: 'forms'
   });
-  return TriedCount;
+  return Form;
 };

@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references:{
           model:{
-            tableName: "Categories"
+            tableName: "categories"
           },
           key: "id"
         }
@@ -27,10 +27,10 @@ module.exports = {
       deleteAt: {
         type: Sequelize.DATE
       },
-      latX: {
+      lat: {
         type: Sequelize.STRING
       },
-      lutY: {
+      lng: {
         type: Sequelize.STRING
       },
       city: {
@@ -49,13 +49,16 @@ module.exports = {
         type: Sequelize.INTEGER,
         references:{
           model:{
-            tableName: "Users"
+            tableName: "users"
           },
           key: "id"
         }
       },
       isReturned: {
         type: Sequelize.BOOLEAN
+      },
+      allowedAttempts: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
