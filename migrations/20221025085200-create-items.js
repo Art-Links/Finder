@@ -42,7 +42,7 @@ module.exports = {
       street: {
         type: Sequelize.STRING
       },
-      discrrtion: {
+      description: {
         type: Sequelize.STRING
       },
       userId: {
