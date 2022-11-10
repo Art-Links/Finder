@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
 			});
 			User.hasOne(models.UserInfo, {foreignKey: "userId"});
 
-      User.hasMany(models.items, {
-				foreignKey: 'id',
+      User.hasMany(models.Item, {
+				foreignKey: 'userId',
 			});
 		}
 	}
@@ -30,10 +30,11 @@ module.exports = (sequelize, DataTypes) => {
     passwordConfirmation: DataTypes.STRING,
     userTypeId: DataTypes.STRING,
     isActive: DataTypes.BOOLEAN,
-    deleteAt: DataTypes.DATE
+    deletedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'User',
+    tableName: 'users'
   });
   return User;
 };
