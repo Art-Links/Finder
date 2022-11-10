@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     categoryId: DataTypes.INTEGER,
     blurImage: DataTypes.STRING,
-    deleteAt: DataTypes.DATE,
+    deletedAt: DataTypes.DATE,
     lat: DataTypes.STRING,
     lng: DataTypes.STRING,
     city: DataTypes.STRING,
@@ -39,7 +39,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Item',
-    tableName: 'items'
+    tableName: 'items',
+    paranoid: true
   });
   return Item;
 };

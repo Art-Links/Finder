@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     passwordConfirmation: DataTypes.STRING,
     userTypeId: DataTypes.STRING,
     isActive: DataTypes.BOOLEAN,
-    deleteAt: DataTypes.DATE
+    deletedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'User',

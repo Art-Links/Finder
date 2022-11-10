@@ -34,7 +34,7 @@ module.exports = {
       isActive: {
         type: Sequelize.BOOLEAN
       },
-      deleteAt: {
+      deletedAt: {
         type: Sequelize.DATE
       },
       createdAt: {

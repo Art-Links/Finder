@@ -24,7 +24,7 @@ module.exports = {
       blurImage: {
         type: Sequelize.STRING
       },
-      deleteAt: {
+      deletedAt: {
         type: Sequelize.DATE
       },
       lat: {
