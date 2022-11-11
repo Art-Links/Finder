@@ -26,6 +26,16 @@ const authService = {
 
         }
         return payload
+    },
+    deleteToken: function() {
+        
+        try {
+            var deleted = jwt.destroy(token)
+        } catch (e) {
+
+
+        }
+        return deleted
     }
 }
 
