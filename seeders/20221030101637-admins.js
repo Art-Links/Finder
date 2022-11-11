@@ -16,6 +16,7 @@ module.exports = {
       userName: 'EmadAishan',
       email: 'openemad@gmail.com',
       password: authService.hashPassword('1234567890'),
+      passwordConfirmation: authService.hashPassword('1234567890'),
       userTypeId: 1,
       createdAt: new Date(),
       updatedAt: new Date()
