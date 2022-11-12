@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       Item.hasMany(models.Question, {
         foreignKey: 'itemId'
       })
+      Item.hasMany(models.Form, {
+        foreignKey: 'itemId'
+      })
     }
   }
   Item.init({
