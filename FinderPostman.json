@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "749ae12d-68c9-49d8-9223-79b92a66c2a6",
+		"_postman_id": "65c1da56-501e-4cb8-9b4b-c761339ab666",
 		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23567850"
+		"_exporter_id": "3880121"
 	},
 	"item": [
 		{
@@ -145,7 +145,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"account\":\"abdoo\",\r\n    \"password\": \"1234567890\"\r\n}",
+									"raw": "{\r\n    \"account\":\"ali\",\r\n    \"password\": \"12211690\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -322,13 +322,13 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "ali",
+											"value": "Phones",
 											"type": "text"
 										},
 										{
 											"key": "icon",
 											"type": "file",
-											"src": []
+											"src": "/Users/ferasjobeir/Downloads/image.png"
 										}
 									]
 								},
@@ -467,7 +467,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidHlwZSI6InVzZXIiLCJlbWFpbCI6ImFsaUBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6ImFsaSIsImlhdCI6MTY2NzU1MTM4N30.bQ0UUg5X2X_3Z1i5bUQHhFFFeVIPSKPtjmWmtU3aGhk",
+											"value": "{{userToken}}",
 											"type": "string"
 										}
 									]
@@ -479,7 +479,7 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "asdfds",
+											"value": "Mobile Phone",
 											"type": "text"
 										},
 										{
@@ -489,37 +489,37 @@
 										},
 										{
 											"key": "lat",
-											"value": "latX",
+											"value": "41.0157464",
 											"type": "text"
 										},
 										{
 											"key": "lng",
-											"value": "lutY",
+											"value": "28.6614805",
 											"type": "text"
 										},
 										{
-											"key": "city",
-											"value": "NYY",
-											"type": "text"
-										},
-										{
-											"key": "state",
-											"value": "istanbul",
-											"type": "text"
-										},
-										{
-											"key": "street",
-											"value": "mahmutbay",
+											"key": "placeId",
+											"value": "ChIJawhoAASnyhQR0LABvJj-zOE",
 											"type": "text"
 										},
 										{
 											"key": "description",
-											"value": "i found this in the metro",
+											"value": "i found this in the metro vezneciler",
 											"type": "text"
 										},
 										{
 											"key": "categoryId",
 											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "questions[]",
+											"value": "What is the color of the item",
+											"type": "text"
+										},
+										{
+											"key": "questions[]",
+											"value": "What is the brand of the item",
 											"type": "text"
 										}
 									]
@@ -1272,7 +1272,10 @@
 							"name": "Show all",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -1314,7 +1317,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidHlwZSI6ImFkbWluIiwiZW1haWwiOiJvcGVuZW1hZEBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6IkVtYWRBaXNoYW4iLCJpYXQiOjE2NjgxNTgwMjV9.W-zjqbHgSXjEVmTIaH9Yyhy6_c5eRw-0drO53lHilpY",
+											"value": "{{userToken}}",
 											"type": "string"
 										}
 									]
@@ -1323,7 +1326,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"answers\": \"I am good.\",\r\n    \"itemId\": \"3\",\r\n    \"userId\": \"2\",\r\n    \"accepted\":\"false\"\r\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1331,7 +1334,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/forms/2",
+									"raw": "http://localhost:3000/forms/accept/2",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1339,6 +1342,7 @@
 									"port": "3000",
 									"path": [
 										"forms",
+										"accept",
 										"2"
 									]
 								}
