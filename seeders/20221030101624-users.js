@@ -13,10 +13,10 @@ module.exports = {
      * }], {});
     */
      return queryInterface.bulkInsert('Users', [{
-      userName: 'abdoo',
-      email: 'abdoo@gmail.com',
-      password: authService.hashPassword('1234567890'),
-      passwordConfirmation: authService.hashPassword('1234567890'),
+      userName: 'abod',
+      email: 'abod@gmail.com',
+      password: authService.hashPassword('122116900'),
+      passwordConfirmation: authService.hashPassword('122116900'),
       userTypeId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
