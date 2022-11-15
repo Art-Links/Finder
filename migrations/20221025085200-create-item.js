@@ -33,14 +33,8 @@ module.exports = {
       lng: {
         type: Sequelize.STRING
       },
-      city: {
-        type: Sequelize.STRING
-      },
-      state: {
-        type: Sequelize.STRING
-      },
-      street: {
-        type: Sequelize.STRING
+      placeId: {
+        type: Sequelize.TEXT
       },
       description: {
         type: Sequelize.STRING

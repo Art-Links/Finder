@@ -20,6 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       Item.hasMany(models.Question, {
         foreignKey: 'itemId'
       })
+      Item.hasMany(models.Form, {
+        foreignKey: 'itemId'
+      })
     }
   }
   Item.init({
@@ -29,9 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: DataTypes.DATE,
     lat: DataTypes.STRING,
     lng: DataTypes.STRING,
-    city: DataTypes.STRING,
-    state: DataTypes.STRING,
-    street: DataTypes.STRING,
+    placeId: DataTypes.TEXT,
     description: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     isReturned: DataTypes.BOOLEAN,
