@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    return queryInterface.bulkInsert('UserTypes', [{
+    return queryInterface.bulkInsert('userTypes', [{
       type: 'admin',
       createdAt: new Date(),
       updatedAt: new Date()

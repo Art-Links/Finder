@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    return queryInterface.bulkInsert('Users', [{
+    return queryInterface.bulkInsert('users', [{
       userName: 'EmadAishan',
       email: 'openemad@gmail.com',
       password: authService.hashPassword('1234567890'),
