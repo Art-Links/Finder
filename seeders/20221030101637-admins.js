@@ -13,6 +13,7 @@ module.exports = {
      * }], {});
     */
     return queryInterface.bulkInsert('users', [{
+      
       userName: 'EmadAishan',
       email: 'openemad@gmail.com',
       password: authService.hashPassword('1234567890'),
