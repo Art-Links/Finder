@@ -49,7 +49,7 @@ module.exports = {
         }
       },
       isReturned: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.DATE
       },
       allowedAttempts: {
         type: Sequelize.INTEGER

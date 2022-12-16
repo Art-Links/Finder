@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     placeId: DataTypes.TEXT,
     description: DataTypes.STRING,
     userId: DataTypes.INTEGER,
-    isReturned: DataTypes.BOOLEAN,
+    isReturned: DataTypes.DATE,
     allowedAttempts: DataTypes.INTEGER
   }, {
     sequelize,
