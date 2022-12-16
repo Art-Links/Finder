@@ -7,7 +7,7 @@ var isOwner = async function(req, res, next) {
         ]
     })
 
-    if (req.user.type == 'user' && req.user.id == form.Item.userId) {
+    if (req.user.type == 'user' && req?.user?.id == form?.Item?.userId) {
         return next()
     }
     res.status(403)
